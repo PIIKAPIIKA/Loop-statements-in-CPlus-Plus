@@ -1,61 +1,92 @@
-🔐 Password Strength Checker & Login System (C++)
-Overview
-This C++ application provides a secure and user-friendly system for:
+🔐 C++ Password Management System
+📘 Overview
+This C++ console application simulates a basic password management system, incorporating features such as:
 
-User Registration: Inputting personal details and setting a strong password.
+Password Strength Validation: Ensures passwords meet specified criteria.
 
-Login: Authenticating users with password verification.
+Login Mechanism: Allows users to log in with their credentials.
 
-Password Reset: Allowing users to reset their password via phone number verification.
+Password Recovery: Provides a method for password reset using a linked phone number.
 
-Security Measures: Implementing login attempt limits and account blocking after multiple failed attempts.
+Security Measures: Implements account lockout after multiple failed login attempts.
 
-🛠 Features
-Password Strength Validation: Ensures passwords meet criteria such as minimum length, inclusion of uppercase and lowercase letters, digits, and special characters.
+⚙️ Features
+Password Strength Requirements:
 
-Password Code Generation: Computes a unique code by summing the ASCII values of all characters in the password.
+Minimum length: 12 characters
 
-Login System: Allows users to log in by entering their password.
+Must contain:
 
-Password Reset: Facilitates password reset through phone number verification.
+Uppercase letters
 
-Security Measures: Blocks account or enforces a waiting period after multiple failed login attempts.
+Lowercase letters
 
+Digits
 
-🚀 How to Compile and Run
-Save the Code: Copy the code into a file named password_checker.cpp.
+Special characters
 
-Open Terminal/Command Prompt: Navigate to the directory containing the file.
+User Interaction:
 
-Compile the Code:
+Prompts for username, phone number, and password.
 
-On Linux/macOS:
+Validates password strength before setting.
+
+Allows login attempts with feedback on success or failure.
+
+Provides password recovery option via phone number.
+
+Security Protocols:
+
+Limits login attempts to prevent unauthorized access.
+
+Implements a cooldown period after multiple failed login attempts.
+
+🛠️ Technologies Used
+Programming Language: C++
+
+Standard Libraries:
+
+<iostream>: For input and output operations.
+
+<string>: To handle string manipulations.
+
+<cctype>: For character classification functions.
+
+📂 File Structure
+bash
+Copy
+Edit
+/PasswordManagementSystem
+│
+├── main.cpp          # Main application logic
+└── README.md         # Project documentation
+▶️ Usage Instructions
+Clone the Repository:
 
 bash
 Copy
 Edit
-g++ -o password_checker password_checker.cpp
-On Windows (using MinGW):
+git clone https://github.com/yourusername/PasswordManagementSystem.git
+cd PasswordManagementSystem
+Compile the Program:
 
 bash
 Copy
 Edit
-g++ -o password_checker.exe password_checker.cpp
-Run the Program:
-
-On Linux/macOS:
+g++ -o password_manager main.cpp
+Run the Executable:
 
 bash
 Copy
 Edit
-./password_checker
-On Windows:
+./password_manager
+Follow On-Screen Prompts:
 
-bash
-Copy
-Edit
-password_checker.exe
-📝 Notes
-Security Disclaimer: This program is a basic demonstration for educational purposes. It does not implement real-world security features like encryption or secure storage. Always use trusted and secure methods for handling passwords in real applications.
+Enter your name and phone number.
 
-Customization: Feel free to modify the code to suit your specific requirements or to add additional features.
+Set a password that meets the strength criteria.
+
+Attempt to log in with the set password.
+
+Use the "forgot" option to reset the password if necessary.
+
